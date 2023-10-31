@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+:root {
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+  --secondary-salmon: #ee9972;
+  --secondary-salmon-light: #fbdabb;
+  --secondary-white: #edefee;
+  --secondary-grey: #333333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--secondary-white);
+  color: var(--secondary-grey);
+  font-family: Karla, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.navbar,
+.footer,
+.hero__content,
+.about__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  height: 6rem;
+}
+
+.navbar-links,
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-links,
+.footer-links,
+.hero__content,
+.about__content {
+  gap: 1.25rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: var(--secondary-grey);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.5625rem 1.125rem;
+  border-radius: 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links li a:hover {
+  background-color: var(--primary-green);
+  color: var(--primary-yellow);
+}
+
+.hero {
+  background-color: var(--primary-green);
+  padding: 2.5rem 0;
+}
+
+.hero__img {
+  width: 390px;
+  height: 518px;
+}
+
+.hero__img img {
+  max-height: 100%;
+  border-radius: 0.5rem;
+}
+
+.hero__text,
+.about__text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.75rem;
+  max-width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.hero__text__heading h1,
+.about__text__heading h1,
+.about__text__heading h2,
+.hero__text__heading h2 {
+  font-family: "Markazi Text", serif;
+  line-height: 0.75;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero__text__heading h1,
+.about__text__heading h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--primary-yellow);
+}
+
+.hero__text__heading h2,
+.about__text__heading h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.hero__text__heading h2,
+.hero__text p {
+  color: var(--secondary-white);
+}
+
+.about__text__heading h2,
+.about__text p {
+  color: var(--secondary-grey);
+}
+
+.hero__text p,
+.about__text p,
+.btn {
+  font-size: 1.125rem;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  max-width: 12.4834rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  color: var(--secondary-grey);
+  background-color: var(--primary-yellow);
+}
+
+.about {
+  padding: 5rem 0;
+}
+
+.about__img {
+  max-width: 50%;
+  display: flex;
+  position: relative;
+}
+
+.about__img--big {
+  max-width: 90%;
+}
+
+.about__img--small {
+  max-width: 70%;
+  position: absolute;
+  top: 15%;
+  left: 80%;
+}
+
+.about__img img {
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  background-color: var(--secondary-salmon-light);
+  padding: 5rem 0;
+}
+
+.footer-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+nav h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  max-width: 8.75rem;
+  min-height: 2.875rem;
+}
+
+.footer-links__link {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 11.25rem;
+}
+
+.footer-links__link li a {
+  color: var(--secondary-grey);
+  text-decoration: none;
+  line-height: 150%;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-links__link li a:hover {
+  color: var(--primary-green);
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
